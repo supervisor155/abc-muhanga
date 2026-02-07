@@ -1,11 +1,8 @@
+/* src/index.css */
 @import "tailwindcss";
 
-/* Add this line below the import */
+/* If you want to define custom colors for ABC Company */
 @theme {
-  @reference "tailwindcss";
-}
-
-/* Now your @apply rules will work perfectly */
-.my-custom-class {
-  @apply bg-slate-900/50 backdrop-blur-md;
+  --color-abc-blue: #2563eb;
+  --color-abc-dark: #1e293b;
 }
