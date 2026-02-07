@@ -1,20 +1,11 @@
-@@theme {
-  --color-dark-bg: #030712;
-  --color-card-bg: #0f172a;
-  --color-neon-cyan: #22d3ee;
-  --color-neon-purple: #818cf8;
-  
-  /* Futuristic Glow Animation */
-  @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 5px rgba(34, 211, 238, 0.2); }
-    50% { box-shadow: 0 0 20px rgba(34, 211, 238, 0.4); }
-  }
-  --animate-pulse-glow: pulse-glow 3s infinite;
+@import "tailwindcss";
+
+/* Add this line below the import */
+@theme {
+  @reference "tailwindcss";
 }
 
-/* Custom Cyberpunk Input Style */
-.cyber-input {
-  @apply bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white 
-         focus:outline-none focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan/50
-         transition-all duration-300 placeholder:text-slate-500;
+/* Now your @apply rules will work perfectly */
+.my-custom-class {
+  @apply bg-slate-900/50 backdrop-blur-md;
 }
